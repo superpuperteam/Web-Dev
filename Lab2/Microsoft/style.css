@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 16px; /* Default font size on macOS */
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    font-feature-settings: 'liga', 'kern', 'case';
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+    float: right;
+}
+
+.products {
+    padding-top: 20px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+    float: right;
+    margin-right: 20px;
+}
+
+.link-items1 {
+    margin-top: 1px;
+    padding: 16px 8px 10px 8px;
+    height: 48px;
+    outline-offset: -2px;
+}
+
+.link-items:hover {
+    text-decoration: underline;
+}
+
+.link-items {
+    text-decoration: none;
+    color: #000;
+}
+
+.click {
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: -4px;
+}
+
+.icon {
+    margin-top: 1px;
+    float: left;
+    width: 110px;
+    padding: 20px 6px 16px 10px;
+    outline-offset: -2px;
+    margin-top: -3px;
+    border-color: #fff;
+}
+
+.menu-items {
+    font-size: 13px !important;
+    text-align: left;
+    display: block;
+    height: 54px;
+    margin-bottom: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+.left-menu-items {
+    border: 1px solid transparent;
+    color: #262626;
+    display: inline-block;
+    height: 49px;
+    padding-top: 19px;
+    margin-left: 5px;
+}
+
+.right-menu-items {
+    float: right;
+    margin-top: -16px;
+}
+
+#banner-image {
+    height: 475px;
+    margin: 5px;
+    margin-top: -15px;
+}
+
+.search {
+    height: 25px;
+    float: right;
+    margin-left: 5px;
+}
+
+.search-text {
+    float: right;
+    margin-top: 20px;
+}
+
+.profile-login {
+    float: right;
+    margin: 20px;
+}
+
+#banner-text {
+    position: absolute;
+    margin-top: 110px;
+    width: 500px;
+    margin-left: 120px;
+    font-size: 2.2em;
+    color: #fff;
+}
+
+#banner-paragraph {
+    position: absolute;
+    margin-top: 240px;
+    width: 460px;
+    color: #fff;
+    margin-left: 120px;
+}
+
+.banner {
+    background-image: url(file:///Users/amina/Desktop/webdev/Lab2/Microsoft/image/microsoft-1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 475px;
+    margin: 5px;
+}
+
+#banner-button {
+    position: absolute;
+    background-color: #347aeb;
+    border: none;
+    border-radius: 1px;
+    color: #fff;
+    height: 35px;
+    width: 230px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 340px;
+}
+
+.news-banner .link-items {
+    color: blue;
+}
+
+.news {
+    margin: 30px;
+    width: 300px;
+}
+
+.news-image {
+    width: 320px;
+    display: inline-block;
+}
+
+.news-banner {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
