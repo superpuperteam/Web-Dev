@@ -1,41 +1,45 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
-import { Product, products } from '../products';
-
+import { Component } from '@angular/core';
+import { products } from '../products';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css'],
+  styleUrls: ['./product-list.component.css']
 })
-
 export class ProductListComponent {
-  products = [...products];
-  @Input() category : string | undefined;
-  categoryItems: Product[] = [];
+  selectedCategory: string = '';
+  products = products.map(product => ({ ...product, like: Math.floor(Math.random() * 101), liked: false}));
 
-  ngOnInit(){
+  constructor() {}
+  filterByCategory(category: string) {
+    this.selectedCategory = category
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if ('category' in changes) {
-      this.filterCategoryItems();
-    }
+  showAllCategories() {
+    this.selectedCategory = '';
   }
 
-  private filterCategoryItems(): void {
-    if(!this.category){
-      this.categoryItems = this.products;
-    }
-    else{
-      this.categoryItems = this.products.filter(item => item.category === this.category);  
-    }
+  share(url: String) {
+    window.open(`https://t.me/share/url?url=${url}`);
   }
-
-  removeItem(item: Product): void {
-    const index = this.products.indexOf(item);
-    if (index > -1) {
+  getRatingStars(rating: number) {
+    return Array(rating).fill(0);
+  }
+  removeProduct(product: any){
+    const index = this.products.indexOf(product);
+    if(index !== -1) {
       this.products.splice(index, 1);
-      this.filterCategoryItems();
+      alert(product.name + " is removed!");
     }
   }
+  changeLike(product:any) {
+    product.liked ? product.like-- : product.like++;
+    product.liked = !product.liked;
+  }
+  
 }
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
